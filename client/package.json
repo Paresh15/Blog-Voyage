@@ -37,5 +37,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://blog-voyage-qa0b.onrender.com/api/"
+  "proxy": "http://localhost:5000/api/"
 }
