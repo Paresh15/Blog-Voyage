@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./topbar.css";
 import BASE_URL from '../../baseURL'
+import Logo1 from "../../image_client/Logo.png"
 
 export default function TopBar() {
   const { user, dispatch } = useContext(Context);
@@ -15,10 +16,13 @@ export default function TopBar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <i className="topIcon fab fa-facebook-square"></i>
+        {/* <i className="topIcon fab fa-facebook-square"></i>
         <i className="topIcon fab fa-twitter-square"></i>
         <i className="topIcon fab fa-pinterest-square"></i>
-        <i className="topIcon fab fa-instagram-square"></i>
+        <i className="topIcon fab fa-instagram-square"></i> */}
+        <Link to="/">
+            <img className="topImg" src={Logo1} alt="" />
+          </Link>
       </div>
       <div className="topCenter">
         <ul className="topList">
@@ -28,13 +32,8 @@ export default function TopBar() {
             </Link>
           </li>
           <li className="topListItem">
-            <Link className="link" to="/">
+            <Link className="link" to="/about">
               ABOUT
-            </Link>
-          </li>
-          <li className="topListItem">
-            <Link className="link" to="/">
-              CONTACT
             </Link>
           </li>
           <li className="topListItem">
@@ -66,7 +65,6 @@ export default function TopBar() {
             </li>
           </ul>
         )}
-        <i className="topSearchIcon fas fa-search"></i>
       </div>
     </div>
   );
